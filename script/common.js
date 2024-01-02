@@ -1,0 +1,67 @@
+$(function () {
+
+    // 메뉴
+    $(".menu>li").on({
+        mouseover: function () {
+            $(".submenu", this).stop().slideDown();
+        },
+        mouseout: function () {
+            $(".submenu", this).stop().slideUp();
+        }
+    });
+
+    // 햄버거바
+    $(".htn").on({
+        mouseover:function(){
+            $(".h_menu").stop().fadeIn()
+        },
+        mouseout:function(){
+            $(".h_menu").stop().fadeOut()
+        }
+    });
+
+    // 햄버거바 슬라이드 
+    $(".menu_h>li").on({
+        mouseover:function(){
+            $(".submenu_h",this).stop().slideDown()
+        },
+        mouseout:function(){
+            $(".submenu_h",this).stop().slideUp()
+        }
+    })
+
+
+    // 상단고정 
+    $(function(){
+        
+        let spot = $("section").offset().top;
+        // header가 다시 나타나는 부분 설정 
+        console.log(spot)
+
+        
+        $(window).scroll(function(){
+            let pot = $(window).scrollTop();
+            console.log(pot)
+
+            if( pot > spot){
+                $(".iheader").addClass("fix")
+            } else{
+                $(".iheader").removeClass("fix")
+            }
+
+            if(pot >1000){
+                $(".ttn").stop().fadeIn();
+            } else{
+                $(".ttn").stop().fadeOut();
+            }
+        });
+
+        $(".ttn").click(function(){
+            $(window).scrollTop(0);
+        });
+
+    });
+
+
+    // 
+});
