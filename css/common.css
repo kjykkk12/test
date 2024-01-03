@@ -1,0 +1,949 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.hidden {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: none;
+    font-size: 0;
+    overflow: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+}
+
+video{
+    width: 100%;
+    display: block;
+    z-index: 98;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 150px;
+}
+
+.name{
+    text-align: center;
+    margin-top: 200px;
+}
+
+header{
+    width: 100%;
+    height: 100%;
+}
+
+.iheader {
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+    padding-right: 40px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fix{
+    background-color: #000;
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    position: fixed;
+    visibility: inherit;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    animation: drop 0.5s;
+}
+@keyframes drop{
+    0%{
+        top: -100px;
+    }
+    100%{
+        top:0;
+    }
+}
+
+.iheader h1 img {
+    width: 80%;
+}
+
+.iheader nav ul li a,
+.h_menu nav ul li a {
+    display: block;
+}
+
+.iheader nav {
+    width: 50%;
+    z-index: 999;
+}
+
+.iheader nav .menu {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iheader nav .menu>li {
+    width: 20%;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.iheader nav .menu>li:hover {
+    background-color: #cccccc87;
+}
+
+.iheader nav .submenu>li {
+    background-color: #0000005c;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.iheader nav .submenu>li:hover {
+    background-color: #cccccc22;
+}
+
+.iheader nav .submenu {
+    display: none;
+}
+
+.iheader .htn {
+    width: 15px;
+    height: 15px;
+    display: none;
+}
+
+.iheader .htn img {
+    width: 100%;
+}
+
+/* //header */
+
+.h_menu{
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #00000080;
+    z-index: 9999;
+}
+
+.ctn{
+    width: 100%;
+    height: 40px;
+}
+.ctn .close{
+    padding: 0 5px;
+    color: #fff;
+}
+
+.h_menu .menu_h{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.h_menu .submenu_h{
+    line-height: 50px;
+    font-weight: 400;
+    display: none;
+}
+
+.h_menu .menu_h>li:hover{
+    background-color: #cccccc87;
+}
+
+.h_menu .submenu_h>li:hover{
+    background-color:  #ccccccbe;
+}
+/* //햄버거바 */
+
+.about {
+    margin-top: 150px;
+}
+.about .aimg{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about .abox h2{
+    margin-top: 67px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.about .abox .atext{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.about .abox p{
+    margin-bottom: 15px;
+    line-height: 160%;
+}
+
+.about .abox .atext span{
+    color: red;
+}
+
+.about .abox .bbtn {
+    position: relative;
+}
+
+.abox .bbtn::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* //about */
+
+.ptext>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ptext>ul>li {
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 15%;
+    text-align: center;
+    margin: 0 20px;
+    margin-bottom: 50px;
+}
+
+.pbox {
+    text-align: center;
+}
+
+.pbox button{
+    border: none;
+    background-color: #fff;
+}
+
+.pbox .bbtn {
+    position: relative;
+    display: inline-block;
+}
+
+.pbox .bbtn::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.pbox p {
+    font-size: 0.9rem;
+}
+
+.pbox span {
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin: 10px 0;
+}
+
+/* //production */
+
+.youtube>.row {
+    margin-bottom: 50px;
+}
+
+.ybox_t .bbtn {
+    position: relative;
+}
+
+.ybox_t>.bbtn::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.ybox p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.ybox span {
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin: 10px 0;
+}
+
+.ybox_t {
+    text-align: center;
+    margin-top: 30%;
+    position: relative;
+}
+
+.ybox_t h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ybox_t>p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+/* //youtube */
+
+.instagram{
+    padding-top: 150px;
+}
+
+.instagram>.row {
+    margin-bottom: 50px;
+}
+
+.instagram>.row {
+    margin-bottom: 50px;
+}
+
+.ibox_t {
+    text-align: center;
+    margin-top: 30%;
+}
+
+.ibox_t h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ibox_t>p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.ibox_t .bbtn {
+    position: relative;
+}
+
+.ibox_t>.bbtn::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.ibox {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.ibox p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+
+.iicon {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.iicon .iicon_left {
+    margin-left: 10px;
+}
+
+.iicon .iicon_left a {
+    display: flex;
+}
+
+.iicon .iicon_left img {
+    margin: 0 5px;
+}
+
+.iicon .iicon_right {
+    margin-right: 10px;
+}
+
+/* //instagram */
+
+.notice {
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.nbox>ul>li {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    border-bottom: 1px solid #000;;
+}
+
+.nbox>ul>li:last-child{
+    margin-bottom: 20px;
+}
+
+.nbox>.bbtn {
+    position: relative;
+}
+
+.nbox>.bbtn::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.event {
+    margin-bottom: 150px;
+}
+
+.ttn {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 320px;
+    right: 30px;
+    display: none;
+}
+
+.ttn img {
+    width: 50%;
+    margin: 10px auto;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.flogo {
+    width: 20%;
+    margin-top: 30px;
+}
+
+.flogo img{
+    width: 80%;
+}
+
+.fcopy {
+    width: 40%;
+    height: 100%;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.fcopy .ltop {
+    width: 100%;
+    height: 50%;
+    line-height: 170%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fcopy .lbottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ficon {
+    width: 35%;
+    height: 100%;
+    color: #fff;
+}
+
+.ficon .rtop {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ficon .rtop a{
+    margin: 0 20px;
+}
+
+.ficon .rtop img{
+    width: 90%;
+}
+
+.ficon .rbottom {
+    width: 100%;
+    height: 50%;
+    margin-right: 50px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer .ficon .rbottom a:not(:last-child):after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.bbtn {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:1199px) {
+    header .iheader h1 img {
+        width: 70%;
+    }
+
+    header .iheader .menu>li {
+        font-size: 0.8rem;
+    }
+
+    section .about .abox .atext{
+        font-size: 1.2rem;
+    }
+
+    section .about .abox p{
+        font-size: 1rem;
+    }
+
+    
+    .ibox p{
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    section .instagram .iicon_left {
+        margin: 0;
+        display: flex;
+    }
+
+    section .instagram .iicon_right {
+        margin: 3px;
+    }
+
+    section .notice .nbox ul li,
+    section .event .nbox ul li {
+        font-size: 0.9rem;
+    }
+
+    .ttn{
+        width: 40px;
+        height: 40px;
+    }
+
+    .ttn img{
+        width: 40%;
+    }
+    footer .flogo img {
+        width: 80%;
+    }
+
+    footer .fcopy {
+        font-size: 0.8rem;
+    }
+
+    footer .ficon .rtop img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    header .iheader h1 img {
+        width: 50%;
+    }
+
+    header .iheader .menu>li{
+        font-size: 0.7rem;
+    }
+
+    header .iheader .submenu>li{
+        font-size: 0.6rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .about .abox h2{
+        margin-top: 20px;
+    }
+
+    section .about .abox .atext{
+        font-size: 1rem;
+    }
+
+    section .about .abox p{
+        font-size: 0.9rem;
+    }
+
+
+    section .ptext>ul>li {
+        font-size: 1rem;
+    }
+
+    section .product .pbox span {
+        font-size: 0.9rem;
+    }
+
+    section .product .pbox p {
+        font-size: 0.8rem;
+    }
+
+    .btn{
+        font-size: 0.9rem;
+    }
+
+    section .ybox span {
+        font-size: 0.9rem;
+    }
+
+    section .ybox p {
+        font-size: 0.8rem;
+    }
+
+    section .ybox_t h4,
+    section .ibox_t h4 {
+        font-size: 1.2rem;
+    }
+
+    section .ybox_t p,
+    section .ibox_t p {
+        font-size: 0.8rem;
+    }
+
+    section .ibox p {
+        font-size: 0.8em;
+    }
+
+    section .iicon_left img {
+        width: 15px;
+    }
+
+    section .iicon_right img {
+        width: 12px;
+    }
+
+    footer .flogo img {
+        width: 70%;
+    }
+
+    footer .fcopy {
+        font-size: 0.7rem;
+    }
+
+    footer .fcopy .lbottom,
+    footer .ficon .rbottom {
+        font-size: 0.6rem;
+    }
+
+    footer .ficon .rtop img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .iheader{
+        padding-right:30px;
+        padding-left: 10px;
+    }
+
+    header .iheader h1 img {
+        width: 40%;
+    }
+
+    header .iheader nav {
+        display: none;
+    }
+
+    header .iheader .htn {
+        display: block;
+    }
+
+    .about .abox h2{
+        text-align: center;
+    }
+
+    .about .abox{
+        text-align: center;
+    }
+
+    .about .aimg{
+        justify-content: center;
+    }
+
+    .about .aimg img{
+        width: 40%;
+    }
+
+    section .ptext>ul>li {
+        font-size: 0.9rem;
+    }
+
+    .name{
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    .title{
+        display: none;
+    }
+
+    .product .pbox{
+        margin-bottom: 50px;
+    }
+
+    .gyoutube{
+        margin: 0;
+    }
+
+    .gyoutube h2{
+        display: none;
+    }
+
+    section .ybox_t h4{
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        margin-top: 150px;
+    }
+
+    .ybox_t p,
+    .ybox_t a{
+        display: none;
+    }
+
+    .ybox_t,
+    .ibox_t{
+        margin-top: 0;
+    }
+
+    .instagram{
+        padding-top: 0;
+    }
+
+    section .ibox_t h4{
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        margin-top: 150px;
+    }
+
+    .ibox_t p,
+    .ibox_t a{
+        display: none;
+    }
+
+    section .notice .nbox ul li,
+    section .event .nbox ul li {
+        font-size: 0.8rem;
+    }
+
+    .notice{
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    
+    .nbox h2{
+        margin-bottom: 100px;
+    }
+    
+    footer {
+        display: block;
+    }
+
+    footer .flogo {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    footer .flogo img {
+        width: 60%;
+        margin-left: 60px;
+    }
+
+    footer .fcopy {
+        width: 100%;
+        height: 40%;
+    }
+
+    footer .fcopy p {
+        text-align: center;
+    }
+
+    footer .ficon {
+        width: 100%;
+        height: 20%;
+        margin-top: 10px;
+    }
+
+    footer .ficon .rtop {
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    footer .ficon .rbottom{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .iheader{
+        padding-right:20px;
+        padding-left: 5px;
+    }
+
+    header .iheader h1 img {
+        width: 30%;
+    }
+
+    header .iheader .htn {
+        width: 12px;
+        height: 12px;
+    }
+
+    .col-md-4.col-sm-6.col-12{
+        display: flex;
+        justify-content: center;
+    }
+
+    .ibox{
+        margin-bottom: 30px;
+    }
+
+    .instagram>.row {
+        margin-bottom: 0;
+    }
+
+    footer .flogo img{
+        width: 50%;
+        margin-left: 80px;
+    }
+
+    section .ibox p{
+        font-size: 0.7rem;
+    }
+
+    .bbtn{
+        font-size: 0.8rem;
+    }
+    
+}
+@media screen and (max-width:400px) {
+
+    .bbtn{
+        font-size: 0.7rem;
+    }
+
+    section .ptext>ul>li {
+        font-size: 0.8rem;
+    }
+
+    section .ybox span {
+        font-size: 0.8rem;
+    }
+
+    section .ybox p {
+        font-size: 0.7rem;
+    }
+
+    section .ibox p {
+        font-size: 0.7rem;
+    }
+
+    footer .flogo img{
+        margin-left: 60px;
+    }
+
+    footer .ficon .rtop img {
+        width: 60%;
+    }
+
+}
